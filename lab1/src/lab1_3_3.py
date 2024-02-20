@@ -1,3 +1,6 @@
+import black
+
+
 def find_longest_peak(arr: list) -> int:
     length = len(arr)
     if length < 3:
