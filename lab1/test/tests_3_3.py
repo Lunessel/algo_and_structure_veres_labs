@@ -19,6 +19,10 @@ class TestFindLongestPick(unittest.TestCase):
         result = find_longest_peak([2])
         self.assertEqual(result, -1)
 
+    def test_single_elementsd_array(self):
+        result = find_longest_peak([1, 2, 7, 8, 6, 4, 2, 5, 6, 7, 9, 11, 12, 17, 9])
+        self.assertEqual(result, 9)
+
 
 if __name__ == "__main":
     unittest.main()
