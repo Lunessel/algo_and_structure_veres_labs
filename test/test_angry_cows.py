@@ -1,5 +1,5 @@
 import unittest
-from lab2.src.angry_cows import get_max_width
+from src.angry_cows import get_max_width
 
 
 class TestFindLongestPick(unittest.TestCase):
