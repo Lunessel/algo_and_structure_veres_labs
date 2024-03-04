@@ -12,9 +12,9 @@ def can_place_cows(free_sections: list, c: int, min_distance: int):
     return cows_placed >= c
 
 
-def get_max_width(c: int, free_sections: list) -> int:
+def get_max_width(cows: int, free_sections: list) -> int:
 
-    if c == 2:
+    if cows == 2:
         return max(free_sections) - min(free_sections)
 
     free_sections.sort()
@@ -24,7 +24,7 @@ def get_max_width(c: int, free_sections: list) -> int:
 
     while min_distance <= max_distance:
         mid_distance = (min_distance + max_distance) // 2
-        if can_place_cows(free_sections, c, mid_distance):
+        if can_place_cows(free_sections, cows, mid_distance):
             result = mid_distance
             min_distance = mid_distance + 1
         else:
