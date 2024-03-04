@@ -1,5 +1,5 @@
 import unittest
-from lab1.src.lab1_3_3 import *
+from src.find_longest_peak import *
 
 
 class TestFindLongestPick(unittest.TestCase):
