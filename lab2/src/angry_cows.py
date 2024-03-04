@@ -1,4 +1,4 @@
-def can_place_cows(free_sections: list, c: int, min_distance: int):
+def can_place_cows(free_sections: list, cows_gained: int, min_distance: int):
     cows_placed = 1
     last_position = free_sections[0]
     # print(last_position)
@@ -9,7 +9,7 @@ def can_place_cows(free_sections: list, c: int, min_distance: int):
             cows_placed += 1
             last_position = free_sections[i]
 
-    return cows_placed >= c
+    return cows_placed >= cows_gained
 
 
 def get_max_width(cows: int, free_sections: list) -> int:
