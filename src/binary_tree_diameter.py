@@ -26,17 +26,18 @@ class BinaryTree:
             self.data = data
 
 
-def dfs(node, length=0):
-    if not node:
-        return length
-
-    left_length = dfs(node.left, length + 1)
-    right_length = dfs(node.right, length + 1)
-
-    return left_length if left_length > right_length else right_length
-
-
 def binary_tree_diameter(tree: BinaryTree) -> int:
+    def dfs(node, length=0):
+        nonlocal result
+        if not node:
+            return length
+
+        left_len = dfs(node.left, length + 1)
+        right_len = dfs(node.right, length + 1)
+        result = max(result, left_len + right_len)
+
+        return left_len if left_len > right_len else right_len
+
     result = -1
     if tree.left is None:
         return -1
@@ -53,6 +54,3 @@ def binary_tree_diameter(tree: BinaryTree) -> int:
 
         tree = tree.parent
     return result
-
-
-
