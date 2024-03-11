@@ -54,6 +54,25 @@ class TestFindLongestPick(unittest.TestCase):
         result = binary_tree_diameter(tree=root)
         self.assertEqual(result, -1)
 
+    def test_given_tree_sdf(self):
+        root = BinaryTree(100)
+        root.insert(50)
+        root.insert(120)
+        root.insert(105)
+        root.insert(125)
+        root.insert(10)
+        root.insert(8)
+        root.insert(6)
+        root.insert(5)
+        root.insert(12)
+        root.insert(15)
+        root.insert(18)
+        root.insert(19)
+        root.insert(20)
+
+        result = binary_tree_diameter(tree=root)
+        self.assertEqual(result, 9)
+
 
 if __name__ == "__main":
     unittest.main()
